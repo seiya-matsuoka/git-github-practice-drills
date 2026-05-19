@@ -1,0 +1,16 @@
+{
+  "projectName": "Practice Task Board",
+  "statusLabel": "Draft",
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Check repository status",
+      "done": false
+    },
+    {
+      "id": 2,
+      "title": "Review file differences",
+      "done": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+.board {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.board h1 {
+  margin-top: 0;
+}
+
+#task-list {
+  padding-left: 24px;
+}
+
+.done {
+  text-decoration: line-through;
+}
