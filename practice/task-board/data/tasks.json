@@ -1,15 +1,20 @@
 {
   "projectName": "Git/GitHub Practice Task Board",
-  "statusLabel": "Drill Started",
+  "statusLabel": "Drill In Progress",
   "tasks": [
     {
       "id": 1,
       "title": "Check repository status",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
       "title": "Review file differences",
+      "done": false
+    },
+    {
+      "id": 3,
+      "title": "Split related changes into separate commits",
       "done": false
     }
   ]
