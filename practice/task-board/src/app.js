@@ -6,7 +6,13 @@ async function loadTasks() {
   const taskData = await response.json();
 
   const doneCount = taskData.tasks.filter((task) => task.done).length;
-  summaryElement.textContent = `${taskData.projectName} - ${taskData.statusLabel} (${doneCount}/${taskData.tasks.length})`;
+  const summaryState =
+    doneCount === taskData.tasks.length
+      ? "summary-complete"
+      : "summary-progress";
+
+  summaryElement.className = `summary ${summaryState}`;
+  summaryElement.textContent = `${taskData.projectName} / ${taskData.statusLabel} / Done: ${doneCount}/${taskData.tasks.length}`;
 
   taskListElement.innerHTML = "";
 
