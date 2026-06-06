@@ -33,3 +33,16 @@
 .summary-complete {
   background: #ecfdf5;
 }
+
+.board-nav {
+  margin-bottom: 16px;
+}
+
+.board-nav a {
+  font-weight: 600;
+}
+
+.help-list {
+  padding-left: 24px;
+  line-height: 1.8;
+}
