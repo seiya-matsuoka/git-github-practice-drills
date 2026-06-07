@@ -1,0 +1,13 @@
+# local environment files
+.env
+.env.*
+!.env.example
+!*.example.env
+
+# generated files
+dist/
+coverage/
+
+# logs
+*.log
+logs/
