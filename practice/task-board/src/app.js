@@ -6,14 +6,14 @@ async function loadTasks() {
   const taskData = await response.json();
 
   const doneCount = taskData.tasks.filter((task) => task.done).length;
+  const remainingCount = taskData.tasks.length - doneCount;
   const summaryState =
     doneCount === taskData.tasks.length
       ? "summary-complete"
       : "summary-progress";
 
   summaryElement.className = `summary ${summaryState}`;
-  summaryElement.textContent = `${taskData.projectName} / ${taskData.statusLabel} / Done: ${doneCount}/${taskData.tasks.length}`;
-
+  summaryElement.textContent = `${taskData.projectName} / ${taskData.statusLabel} / Done: ${doneCount}/${taskData.tasks.length} / Remaining: ${remainingCount}`;
   taskListElement.innerHTML = "";
 
   for (const task of taskData.tasks) {
