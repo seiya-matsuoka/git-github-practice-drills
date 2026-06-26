@@ -1,6 +1,6 @@
 {
   "projectName": "Git/GitHub Practice Task Board",
-  "statusLabel": "Drill In Progress",
+  "statusLabel": "Correction Practice",
   "tasks": [
     {
       "id": 1,
@@ -15,6 +15,11 @@
     {
       "id": 3,
       "title": "Split related changes into separate commits",
+      "done": false
+    },
+    {
+      "id": 4,
+      "title": "Fix staged changes before committing",
       "done": false
     }
   ]
