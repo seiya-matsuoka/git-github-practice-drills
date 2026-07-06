@@ -5,3 +5,7 @@
 ## Local note
 
 ローカルで作成した変更をGitHubへpushします。
+
+## GitHub note
+
+GitHub上で追記した変更をローカルへ取り込みます。
