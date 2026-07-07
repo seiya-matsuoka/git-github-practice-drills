@@ -9,3 +9,7 @@
 ## GitHub note
 
 GitHub上で追記した変更をローカルへ取り込みます。
+
+## Pull Request note
+
+Pull Request を使うと、作業ブランチの変更を確認してから main に取り込めます。
