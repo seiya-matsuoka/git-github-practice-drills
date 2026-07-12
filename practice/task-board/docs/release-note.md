@@ -12,3 +12,7 @@
 
 - rebase を使って作業ブランチを最新化する
 - squash を使って細かいコミットをまとめる
+
+## Detached HEAD note
+
+Detached HEAD で作成したコミットをブランチとして救出します。
