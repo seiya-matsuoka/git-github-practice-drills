@@ -13,3 +13,7 @@ GitHub上で追記した変更をローカルへ取り込みます。
 ## Pull Request note
 
 Pull Request を使うと、作業ブランチの変更を確認してから main に取り込めます。
+
+## History note
+
+作業ブランチを統合する前に、main の最新状態を確認します。
