@@ -31,6 +31,41 @@
           <p id="updates-count" class="updates-count" aria-live="polite"></p>
         </div>
 
+        <div class="filter-group" role="group" aria-label="更新情報のカテゴリ">
+          <button
+            class="filter-button is-active"
+            type="button"
+            data-category="all"
+            aria-pressed="true"
+          >
+            すべて
+          </button>
+          <button
+            class="filter-button"
+            type="button"
+            data-category="release"
+            aria-pressed="false"
+          >
+            リリース
+          </button>
+          <button
+            class="filter-button"
+            type="button"
+            data-category="maintenance"
+            aria-pressed="false"
+          >
+            メンテナンス
+          </button>
+          <button
+            class="filter-button"
+            type="button"
+            data-category="team"
+            aria-pressed="false"
+          >
+            チーム
+          </button>
+        </div>
+
         <div id="updates-list" class="updates-grid"></div>
         <p id="empty-message" class="empty-message" hidden>
           該当する更新情報はありません。

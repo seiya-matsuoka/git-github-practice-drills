@@ -83,6 +83,37 @@ button {
   font-size: 0.9rem;
 }
 
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.filter-button {
+  padding: 8px 14px;
+  border: 1px solid #b9c2cf;
+  border-radius: 999px;
+  color: #334155;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  border-color: #526079;
+}
+
+.filter-button:focus-visible {
+  outline: 3px solid rgb(37 99 235 / 30%);
+  outline-offset: 2px;
+}
+
+.filter-button.is-active {
+  border-color: #1d4ed8;
+  color: #ffffff;
+  background: #1d4ed8;
+}
+
 .updates-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
