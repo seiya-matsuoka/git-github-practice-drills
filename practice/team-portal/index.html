@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="チーム内の更新情報を確認するための練習用ポータル"
+    />
+    <title>Team Portal</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">Internal Team Portal</p>
+        <h1>Team Portal</h1>
+        <p class="lead">
+          リリース、メンテナンス、チーム内のお知らせを確認できます。
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="updates-section" aria-labelledby="updates-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Latest updates</p>
+            <h2 id="updates-title">更新情報</h2>
+          </div>
+          <p id="updates-count" class="updates-count" aria-live="polite"></p>
+        </div>
+
+        <div id="updates-list" class="updates-grid"></div>
+        <p id="empty-message" class="empty-message" hidden>
+          該当する更新情報はありません。
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
