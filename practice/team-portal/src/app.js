@@ -1,12 +1,15 @@
 const updatesList = document.querySelector("#updates-list");
 const updatesCount = document.querySelector("#updates-count");
 const emptyMessage = document.querySelector("#empty-message");
+const filterButtons = document.querySelectorAll("[data-category]");
 
 const categoryLabels = {
   release: "リリース",
   maintenance: "メンテナンス",
   team: "チーム",
 };
+
+let allUpdates = [];
 
 async function loadUpdates() {
   try {
@@ -16,8 +19,8 @@ async function loadUpdates() {
       throw new Error(`更新情報の取得に失敗しました: ${response.status}`);
     }
 
-    const updates = await response.json();
-    renderUpdates(updates);
+    allUpdates = await response.json();
+    renderUpdates(allUpdates);
   } catch (error) {
     console.error(error);
     updatesList.replaceChildren();
@@ -63,5 +66,27 @@ function createUpdateCard(update) {
 
   return article;
 }
+
+function selectCategory(selectedCategory) {
+  const filteredUpdates =
+    selectedCategory === "all"
+      ? allUpdates
+      : allUpdates.filter((update) => update.category === selectedCategory);
+
+  renderUpdates(filteredUpdates);
+
+  filterButtons.forEach((button) => {
+    const isSelected = button.dataset.category === selectedCategory;
+
+    button.classList.toggle("is-active", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectCategory(button.dataset.category);
+  });
+});
 
 loadUpdates();
