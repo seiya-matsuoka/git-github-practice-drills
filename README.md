@@ -175,3 +175,64 @@ HTML / CSS / JavaScript / JSON / Markdown などのファイルを使い、開�
 ローカル設定、ログ、生成物など、Git で管理しないファイルを設定する。
 
 ---
+
+## 学習時に重視する確認
+
+Git 操作で迷った場合は、すぐに取り消しや履歴変更を行うのではなく、まず現在の状態を確認する。
+
+### 作業ツリーとステージング状態
+
+```bash
+git status
+git status --short
+git diff
+git diff --cached
+```
+
+- どのファイルが変更されているか
+- 未追跡、未ステージング、ステージング済みのどの状態か
+- 作業ツリーとインデックスにどの差分があるか
+- 次のコミットに何が含まれるか
+
+### branch と HEAD
+
+```bash
+git branch
+git branch -vv
+```
+
+- 現在どの branch にいるか
+- HEAD がどの branch や commit を指しているか
+- tracking branch が設定されているか
+- ローカルとリモートに ahead / behind があるか
+
+### コミット履歴
+
+```bash
+git log --oneline --graph --decorate --all
+```
+
+- branch がどこから分岐しているか
+- merge / rebase 後の履歴がどのようになっているか
+- HEAD、ローカル branch、リモート追跡 branch がどの commit を指しているか
+
+### HEAD の移動履歴
+
+```bash
+git reflog
+```
+
+- reset や checkout / switch によって HEAD がどのように移動したか
+- 通常の `git log` から見えなくなった commit が残っていないか
+- 誤操作前の状態へ戻るための commit を確認できるか
+
+### リモート設定
+
+```bash
+git remote -v
+```
+
+- どのリモートリポジトリが設定されているか
+- fetch / push 先のURLが意図したものになっているか
+
+状態確認の結果を読んだうえで、次に行う操作を判断することを重視する。
