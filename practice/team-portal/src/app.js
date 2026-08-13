@@ -61,8 +61,12 @@ function createUpdateCard(update) {
   const summary = document.createElement("p");
   summary.textContent = update.summary;
 
+  const owner = document.createElement("p");
+  owner.className = "update-card__owner";
+  owner.textContent = `担当: ${update.owner}`;
+
   meta.append(category, date);
-  article.append(meta, title, summary);
+  article.append(meta, title, summary, owner);
 
   return article;
 }
