@@ -63,7 +63,7 @@ function createUpdateCard(update) {
 
   const owner = document.createElement("p");
   owner.className = "update-card__owner";
-  owner.textContent = `担当: ${update.owner}`;
+  owner.textContent = `担当チーム: ${update.owner}`;
 
   meta.append(category, date);
   article.append(meta, title, summary, owner);
