@@ -35,7 +35,7 @@ function renderUpdates(updates) {
     ...updates.map((update) => createUpdateCard(update)),
   );
 
-  updatesCount.textContent = `${updates.length}件`;
+  updatesCount.textContent = `表示中: ${updates.length}件`;
   emptyMessage.hidden = updates.length > 0;
 }
 
@@ -63,7 +63,7 @@ function createUpdateCard(update) {
 
   const owner = document.createElement("p");
   owner.className = "update-card__owner";
-  owner.textContent = `担当: ${update.owner}`;
+  owner.textContent = `担当チーム: ${update.owner}`;
 
   meta.append(category, date);
   article.append(meta, title, summary, owner);
