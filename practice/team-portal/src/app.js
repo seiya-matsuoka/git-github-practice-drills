@@ -35,7 +35,7 @@ function renderUpdates(updates) {
     ...updates.map((update) => createUpdateCard(update)),
   );
 
-  updatesCount.textContent = `${updates.length}件`;
+  updatesCount.textContent = `表示中: ${updates.length}件`;
   emptyMessage.hidden = updates.length > 0;
 }
 
