@@ -9,6 +9,11 @@ const categoryLabels = {
   team: "チーム",
 };
 
+const priorityLabels = {
+  high: "高",
+  normal: "通常",
+};
+
 let allUpdates = [];
 
 async function loadUpdates() {
@@ -65,8 +70,12 @@ function createUpdateCard(update) {
   owner.className = "update-card__owner";
   owner.textContent = `担当チーム: ${update.owner}`;
 
+  const priority = document.createElement("p");
+  priority.className = "update-card__priority";
+  priority.textContent = `優先度: ${priorityLabels[update.priority] ?? update.priority}`;
+
   meta.append(category, date);
-  article.append(meta, title, summary, owner);
+  article.append(meta, title, summary, owner, priority);
 
   return article;
 }
