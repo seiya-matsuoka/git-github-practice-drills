@@ -66,7 +66,7 @@ function createUpdateCard(update) {
   owner.textContent = `担当チーム: ${update.owner}`;
 
   meta.append(category, date);
-  article.append(meta, title, summary, owner);
+  article.append(meta, title, summary, owner, priority);
 
   return article;
 }

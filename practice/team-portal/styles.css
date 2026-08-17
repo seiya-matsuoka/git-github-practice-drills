@@ -160,6 +160,13 @@ button {
   font-weight: 700;
 }
 
+.update-card__priority {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .update-card h3 {
   margin: 0;
   font-size: 1.1rem;
