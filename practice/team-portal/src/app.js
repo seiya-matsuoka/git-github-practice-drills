@@ -14,6 +14,11 @@ const priorityLabels = {
   normal: "通常",
 };
 
+const audienceLabels = {
+  all: "全員",
+  development: "開発チーム",
+};
+
 let allUpdates = [];
 
 async function loadUpdates() {
@@ -74,8 +79,12 @@ function createUpdateCard(update) {
   priority.className = "update-card__priority";
   priority.textContent = `優先度: ${priorityLabels[update.priority] ?? update.priority}`;
 
+  const audience = document.createElement("p");
+  audience.className = "update-card__audience";
+  audience.textContent = `対象: ${audienceLabels[update.audience] ?? update.audience}`;
+
   meta.append(category, date);
-  article.append(meta, title, summary, owner, priority);
+  article.append(meta, title, summary, owner, priority, audience);
 
   return article;
 }
