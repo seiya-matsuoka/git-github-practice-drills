@@ -30,3 +30,7 @@ team-portal/
 ├─ index.html
 └─ styles.css
 ```
+
+## 表示順
+
+更新情報は、日付の新しいものから確認できる順序で扱う。
