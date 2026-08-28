@@ -7,7 +7,8 @@
     "date": "2026-07-08",
     "owner": "Product Team",
     "priority": "high",
-    "audience": "all"
+    "audience": "all",
+    "source": "release-note"
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "date": "2026-07-09",
     "owner": "Platform Team",
     "priority": "normal",
-    "audience": "development"
+    "audience": "development",
+    "source": "operation"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "date": "2026-07-10",
     "owner": "Development Team",
     "priority": "normal",
-    "audience": "development"
+    "audience": "development",
+    "source": "meeting-note"
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "date": "2026-07-11",
     "owner": "Product Team",
     "priority": "high",
-    "audience": "all"
+    "audience": "all",
+    "source": "release-note"
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "date": "2026-07-12",
     "owner": "Platform Team",
     "priority": "normal",
-    "audience": "development"
+    "audience": "development",
+    "source": "operation"
   },
   {
     "id": 6,
@@ -57,6 +62,7 @@
     "date": "2026-07-13",
     "owner": "Development Team",
     "priority": "normal",
-    "audience": "development"
+    "audience": "development",
+    "source": "meeting-note"
   }
 ]
